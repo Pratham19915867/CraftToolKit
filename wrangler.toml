@@ -1,0 +1,25 @@
+name = "crafttoolkit"
+main = "src/index.js"
+compatibility_date = "2026-11-08"
+workers_dev = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+[vars]
+APP_ORIGIN = "http://localhost:8787"
+AI_BASE_URL = "https://api.openai.com/v1"
+AI_MODEL = "gpt-4o-mini"
+
+# Cloudflare Worker rate limiting bindings (per IP key)
+[[ratelimits]]
+name = "AUTH_LIMITER"
+namespace_id = "1001"
+simple = { limit = 10, period = 60 }
+
+[[ratelimits]]
+name = "AI_LIMITER"
+namespace_id = "1002"
+simple = { limit = 5, period = 60 }

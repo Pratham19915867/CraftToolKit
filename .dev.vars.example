@@ -1,0 +1,8 @@
+SUPABASE_URL=https://YOUR_PROJECT.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=replace_me
+SESSION_SECRET=replace_with_32_bytes_or_more_of_random_secret
+AI_API_KEY=replace_me
+# Optional, if using a compatible provider:
+AI_BASE_URL=https://api.openai.com/v1
+AI_MODEL=gpt-4o-mini
+APP_ORIGIN=http://localhost:8787
